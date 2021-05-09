@@ -1,8 +1,8 @@
 
--------------------------- Create DB ---------------------------------
+--------------------------Step 1:- Create DB ---------------------------------
 CREATE DATABASE [TestDB]
 
----------------------- create table tblRole ----------------------------------------
+----------------------Step 2:- create table tblRole ----------------------------------------
 
 USE [TestDB]
 GO
@@ -34,7 +34,7 @@ GO
  values ('Regular',1,GETDATE(),'735',GETDATE(),'735'),
         ('Privileged',1,GETDATE(),'735',GETDATE(),'735')
 
---------------------------------- Create table tblUser ---------------------------------------------
+--------------------------------- Step 3:- Create table tblUser ---------------------------------------------
 
 USE [TestDB]
 GO
@@ -70,7 +70,7 @@ GO
     values ('Regular','regular.user@gmail.com','Welcome@123',1,GETDATE(),'735',GETDATE(),'735'),
            ('Privileged','privileged.user@gmail.com','Welcome@123',1,GETDATE(),'735',GETDATE(),'735')
 
------------------------------------ Create table tblUserRole ------------------------------------------------------------------
+-----------------------------------Step 4:- Create table tblUserRole ------------------------------------------------------------------
 
 USE [TestDB]
 GO
