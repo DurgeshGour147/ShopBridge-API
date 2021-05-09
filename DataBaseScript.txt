@@ -1,0 +1,105 @@
+
+-------------------------- Create DB ---------------------------------
+CREATE DATABASE [TestDB]
+
+---------------------- create table tblRole ----------------------------------------
+
+USE [TestDB]
+GO
+
+/****** Object:  Table [dbo].[tblRole]    Script Date: 09-05-2021 20:19:53 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblRole](
+	[R_Id] [int] IDENTITY(500,1) NOT NULL,
+	[R_Name] [varchar](100) NULL,
+	[R_IsActive] [bit] NULL,
+	[R_CreatedOn] [datetime] NULL,
+	[R_CreatedBy] [varchar](255) NULL,
+	[R_ModifiedOn] [datetime] NULL,
+	[R_ModifiedBy] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[R_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+ insert into tblRole
+ values ('Regular',1,GETDATE(),'735',GETDATE(),'735'),
+        ('Privileged',1,GETDATE(),'735',GETDATE(),'735')
+
+--------------------------------- Create table tblUser ---------------------------------------------
+
+USE [TestDB]
+GO
+
+/****** Object:  Table [dbo].[tblUser]    Script Date: 09-05-2021 20:21:54 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblUser](
+	[U_Id] [int] IDENTITY(100,1) NOT NULL,
+	[U_FirstName] [varchar](255) NULL,
+	[U_LastName] [varchar](255) NULL,
+	[U_UserName] [varchar](255) NOT NULL,
+	[U_Password] [varchar](255) NOT NULL,
+	[U_EmailId] [varchar](255) NULL,
+	[U_PhoneNumber] [varchar](255) NULL,
+	[U_IsActive] [bit] NULL,
+	[U_CreatedOn] [datetime] NULL,
+	[U_CreatedBy] [varchar](255) NULL,
+	[U_ModifiedOn] [datetime] NULL,
+	[U_ModifiedBy] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[U_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+    insert into tblUser(U_FirstName,U_UserName,U_Password,U_IsActive,U_CreatedOn,U_CreatedBy,U_ModifiedOn,U_ModifiedBy)
+    values ('Regular','regular.user@gmail.com','Welcome@123',1,GETDATE(),'735',GETDATE(),'735'),
+           ('Privileged','privileged.user@gmail.com','Welcome@123',1,GETDATE(),'735',GETDATE(),'735')
+
+----------------------------------- Create table tblUserRole ------------------------------------------------------------------
+
+USE [TestDB]
+GO
+
+/****** Object:  Table [dbo].[tblUserRole]    Script Date: 09-05-2021 20:22:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblUserRole](
+	[UR_Id] [int] IDENTITY(100,1) NOT NULL,
+	[UR_U_Id] [int] NULL,
+	[UR_R_Id] [int] NULL,
+	[UR_IsActive] [bit] NULL,
+	[UR_CreatedOn] [datetime] NULL,
+	[UR_CreatedBy] [varchar](255) NULL,
+	[UR_ModifiedOn] [datetime] NULL,
+	[UR_ModifiedBy] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UR_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+     insert into tblUserRole
+     values (100,500,1,GETDATE(),'735',GETDATE(),'735'),
+            (101,501,1,GETDATE(),'735',GETDATE(),'735')
+
+-------------------------------------------------------------------------------------------- ---------------------
