@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store", "Jewelry-Store\Jewelry-Store.csproj", "{CC78AF5B-DD02-4978-9CF9-1C3BDC5742E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{15BF6BE8-B3D5-4BF8-AAAB-D43B8E4DF6D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store.Common", "Jewelry-Store.Common\Jewelry-Store.Common.csproj", "{9C10C091-C345-4598-ADB1-67CA5816F0B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{D069D778-4965-44A9-B014-B91B97005645}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-store.Provider", "Jewelry-store.Provider\Jewelry-store.Provider.csproj", "{823B2CF8-CD16-4432-9980-644281918FD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface", "Interface", "{FD1FDE04-E104-4979-90EB-E12E63141473}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DTO", "DTO", "{68E5E448-A4C9-44E8-BEEA-ECD3B2C0992F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store.DTO", "Jewelry-Store.DTO\Jewelry-Store.DTO.csproj", "{DADB5222-1CE2-4A70-BCE1-4F092B98B5CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{62B88D2F-9177-491A-B45B-962AA9C3786C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store.Domain", "Jewelry-Store.Domain\Jewelry-Store.Domain.csproj", "{05542D50-D2AE-4552-AB3A-E9E581D3F100}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{578031E6-3A48-45E1-86DE-DBEBDE23246E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store.RepositoryInterface", "Jewelry-Store.Interface\Jewelry-Store.RepositoryInterface\Jewelry-Store.RepositoryInterface.csproj", "{CE4AD4D9-3C1D-4112-B24C-B2E4C4350965}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store.ProviderInterface", "Jewelry-Store.Interface\Jewelry-Store.ProviderInterface\Jewelry-Store.ProviderInterface.csproj", "{84A3D464-A5F0-4822-85C6-0047E60B1DE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store.CacheRepository", "Jewelry-Store.Repository\Jewelry-Store.CacheRepository\Jewelry-Store.CacheRepository.csproj", "{E163D421-C26C-48BB-BD1C-0C7B04C6A4DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewelry-Store.DBRepository", "Jewelry-Store.Repository\Jewelry-Store.DBRepository\Jewelry-Store.DBRepository.csproj", "{483488E6-24B3-4757-9279-F14109CE5D20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{82B631C5-F51F-411A-BE64-37E7F441F840}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\durgesh.gour\Downloads\JewelryTemplate.html = C:\Users\durgesh.gour\Downloads\JewelryTemplate.html
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewelry-StoreTests", "Jewelry-StoreTests\Jewelry-StoreTests.csproj", "{60E280BA-5526-4E51-B26C-A1578759BCCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC78AF5B-DD02-4978-9CF9-1C3BDC5742E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC78AF5B-DD02-4978-9CF9-1C3BDC5742E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC78AF5B-DD02-4978-9CF9-1C3BDC5742E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC78AF5B-DD02-4978-9CF9-1C3BDC5742E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C10C091-C345-4598-ADB1-67CA5816F0B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C10C091-C345-4598-ADB1-67CA5816F0B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C10C091-C345-4598-ADB1-67CA5816F0B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C10C091-C345-4598-ADB1-67CA5816F0B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823B2CF8-CD16-4432-9980-644281918FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823B2CF8-CD16-4432-9980-644281918FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823B2CF8-CD16-4432-9980-644281918FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823B2CF8-CD16-4432-9980-644281918FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DADB5222-1CE2-4A70-BCE1-4F092B98B5CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DADB5222-1CE2-4A70-BCE1-4F092B98B5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DADB5222-1CE2-4A70-BCE1-4F092B98B5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DADB5222-1CE2-4A70-BCE1-4F092B98B5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05542D50-D2AE-4552-AB3A-E9E581D3F100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05542D50-D2AE-4552-AB3A-E9E581D3F100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05542D50-D2AE-4552-AB3A-E9E581D3F100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05542D50-D2AE-4552-AB3A-E9E581D3F100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE4AD4D9-3C1D-4112-B24C-B2E4C4350965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE4AD4D9-3C1D-4112-B24C-B2E4C4350965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE4AD4D9-3C1D-4112-B24C-B2E4C4350965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE4AD4D9-3C1D-4112-B24C-B2E4C4350965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A3D464-A5F0-4822-85C6-0047E60B1DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A3D464-A5F0-4822-85C6-0047E60B1DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A3D464-A5F0-4822-85C6-0047E60B1DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A3D464-A5F0-4822-85C6-0047E60B1DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E163D421-C26C-48BB-BD1C-0C7B04C6A4DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E163D421-C26C-48BB-BD1C-0C7B04C6A4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E163D421-C26C-48BB-BD1C-0C7B04C6A4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E163D421-C26C-48BB-BD1C-0C7B04C6A4DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{483488E6-24B3-4757-9279-F14109CE5D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483488E6-24B3-4757-9279-F14109CE5D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483488E6-24B3-4757-9279-F14109CE5D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483488E6-24B3-4757-9279-F14109CE5D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E280BA-5526-4E51-B26C-A1578759BCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E280BA-5526-4E51-B26C-A1578759BCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E280BA-5526-4E51-B26C-A1578759BCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E280BA-5526-4E51-B26C-A1578759BCCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C10C091-C345-4598-ADB1-67CA5816F0B2} = {15BF6BE8-B3D5-4BF8-AAAB-D43B8E4DF6D6}
+		{823B2CF8-CD16-4432-9980-644281918FD6} = {D069D778-4965-44A9-B014-B91B97005645}
+		{DADB5222-1CE2-4A70-BCE1-4F092B98B5CD} = {68E5E448-A4C9-44E8-BEEA-ECD3B2C0992F}
+		{05542D50-D2AE-4552-AB3A-E9E581D3F100} = {62B88D2F-9177-491A-B45B-962AA9C3786C}
+		{CE4AD4D9-3C1D-4112-B24C-B2E4C4350965} = {FD1FDE04-E104-4979-90EB-E12E63141473}
+		{84A3D464-A5F0-4822-85C6-0047E60B1DE1} = {FD1FDE04-E104-4979-90EB-E12E63141473}
+		{E163D421-C26C-48BB-BD1C-0C7B04C6A4DB} = {578031E6-3A48-45E1-86DE-DBEBDE23246E}
+		{483488E6-24B3-4757-9279-F14109CE5D20} = {578031E6-3A48-45E1-86DE-DBEBDE23246E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE340B45-C087-48B9-AC9E-D70B02306D09}
+	EndGlobalSection
+EndGlobal
