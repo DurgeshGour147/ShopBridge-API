@@ -7,7 +7,6 @@ CREATE DATABASE [TestDB]
 USE [TestDB]
 GO
 
-/****** Object:  Table [dbo].[tblRole]    Script Date: 09-05-2021 20:19:53 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -31,15 +30,13 @@ GO
 
 
  insert into tblRole
- values ('Regular',1,GETDATE(),'735',GETDATE(),'735'),
-        ('Privileged',1,GETDATE(),'735',GETDATE(),'735')
+ values ('ProductAdmin',1,GETDATE(),'735',GETDATE(),'735')
 
 --------------------------------- Step 3:- Create table tblUser ---------------------------------------------
 
 USE [TestDB]
 GO
 
-/****** Object:  Table [dbo].[tblUser]    Script Date: 09-05-2021 20:21:54 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -67,15 +64,13 @@ PRIMARY KEY CLUSTERED
 GO
 
     insert into tblUser(U_FirstName,U_UserName,U_Password,U_IsActive,U_CreatedOn,U_CreatedBy,U_ModifiedOn,U_ModifiedBy)
-    values ('Regular','regular.user@gmail.com','Welcome@123',1,GETDATE(),'735',GETDATE(),'735'),
-           ('Privileged','privileged.user@gmail.com','Welcome@123',1,GETDATE(),'735',GETDATE(),'735')
+    values ('Product Admin','ProductAdmin@gmail.com','Welcome@123',1,GETDATE(),'735',GETDATE(),'735')
 
 -----------------------------------Step 4:- Create table tblUserRole ------------------------------------------------------------------
 
 USE [TestDB]
 GO
 
-/****** Object:  Table [dbo].[tblUserRole]    Script Date: 09-05-2021 20:22:47 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -99,7 +94,39 @@ PRIMARY KEY CLUSTERED
 GO
 
      insert into tblUserRole
-     values (100,500,1,GETDATE(),'735',GETDATE(),'735'),
-            (101,501,1,GETDATE(),'735',GETDATE(),'735')
+     values (100,500,1,GETDATE(),'735',GETDATE(),'735')
 
--------------------------------------------------------------------------------------------- ---------------------
+---------------------------------------------- Create tblInventoryItem table ---------------------------------------------- ---------------------
+
+USE [TestDB]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblInventoryItem](
+	[I_Id] [int] IDENTITY(1,1) NOT NULL,
+	[I_Name] [varchar](255) NULL,
+	[I_Description] [varchar](max) NULL,
+	[I_TotalPrice] [decimal](18, 0) NULL,
+	[I_DiscountedPrice] [decimal](18, 0) NULL,
+	[I_PerPackCount] [int] NULL,
+	[I_ItemCount] [int] NULL,
+	[I_ExpiryDate] [datetime] NULL,
+	[I_IsActive] [bit] NULL,
+	[I_CreatedOn] [datetime] NULL,
+	[I_CreatedBy] [varchar](100) NULL,
+	[I_ModifiedOn] [datetime] NULL,
+	[I_ModifiedBy] [varchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[I_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
+---------------------------------------------------------------------------------------

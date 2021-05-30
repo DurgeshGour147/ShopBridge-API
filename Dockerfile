@@ -10,44 +10,44 @@ EXPOSE 6001
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY Jewelry-Store.sln ./
-COPY Jewelry-Store/*.csproj ./Jewelry-Store/
-COPY Jewelry-Store.Common/*.csproj Jewelry-Store.Common/
-COPY Jewelry-Store.Domain/*.csproj Jewelry-Store.Domain/
-COPY Jewelry-Store.DTO/*.csproj Jewelry-Store.DTO/
-COPY Jewelry-Store.Interface/Jewelry-Store.ProviderInterface/*.csproj Jewelry-Store.Interface/Jewelry-Store.ProviderInterface/
-COPY Jewelry-Store.Interface/Jewelry-Store.RepositoryInterface/*.csproj Jewelry-Store.Interface/Jewelry-Store.RepositoryInterface/
-COPY Jewelry-store.Provider/*.csproj Jewelry-store.Provider/
-COPY Jewelry-Store.Repository/Jewelry-Store.CacheRepository/*.csproj Jewelry-Store.Repository/Jewelry-Store.CacheRepository/
-COPY Jewelry-Store.Repository/Jewelry-Store.DBRepository/*.csproj Jewelry-Store.Repository/Jewelry-Store.DBRepository/
+COPY ShopBridge.sln ./
+COPY ShopBridge/*.csproj ./ShopBridge/
+COPY ShopBridge.Common/*.csproj ShopBridge.Common/
+COPY ShopBridge.Domain/*.csproj ShopBridge.Domain/
+COPY ShopBridge.DTO/*.csproj ShopBridge.DTO/
+COPY ShopBridge.Interface/ShopBridge.ProviderInterface/*.csproj ShopBridge.Interface/ShopBridge.ProviderInterface/
+COPY ShopBridge.Interface/ShopBridge.RepositoryInterface/*.csproj ShopBridge.Interface/ShopBridge.RepositoryInterface/
+COPY ShopBridge.Provider/*.csproj ShopBridge.Provider/
+COPY ShopBridge.Repository/ShopBridge.CacheRepository/*.csproj ShopBridge.Repository/ShopBridge.CacheRepository/
+COPY ShopBridge.Repository/ShopBridge.DBRepository/*.csproj ShopBridge.Repository/ShopBridge.DBRepository/
 
 RUN dotnet restore
 COPY . .
-WORKDIR /src/Jewelry-Store
+WORKDIR /src/ShopBridge
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-Store.Common
+WORKDIR /src/ShopBridge.Common
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-Store.Domain
+WORKDIR /src/ShopBridge.Domain
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-Store.DTO
+WORKDIR /src/ShopBridge.DTO
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-Store.Interface/Jewelry-Store.ProviderInterface
+WORKDIR /src/ShopBridge.Interface/ShopBridge.ProviderInterface
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-Store.Interface/Jewelry-Store.RepositoryInterface
+WORKDIR /src/ShopBridge.Interface/ShopBridge.RepositoryInterface
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-store.Provider
+WORKDIR /src/ShopBridge.Provider
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-Store.Repository/Jewelry-Store.CacheRepository
+WORKDIR /src/ShopBridge.Repository/ShopBridge.CacheRepository
 RUN dotnet publish -c Release -o /app
 
-WORKDIR /src/Jewelry-Store.Repository/Jewelry-Store.DBRepository
+WORKDIR /src/ShopBridge.Repository/ShopBridge.DBRepository
 RUN dotnet publish -c Release -o /app
 
 FROM build AS publish
@@ -56,4 +56,4 @@ RUN dotnet publish -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/ .
-ENTRYPOINT ["dotnet", "Jewelry-Store.dll"]
+ENTRYPOINT ["dotnet", "ShopBridge.dll"]

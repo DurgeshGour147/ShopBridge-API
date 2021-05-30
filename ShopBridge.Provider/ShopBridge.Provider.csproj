@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Shop_Bridge.Provider</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>../ShopBridge/bin/Debug/netcoreapp3.1</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="itext7.pdfhtml" Version="3.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopBridge.Interface\ShopBridge.ProviderInterface\ShopBridge.ProviderInterface.csproj" />
+    <ProjectReference Include="..\ShopBridge.Interface\ShopBridge.RepositoryInterface\ShopBridge.RepositoryInterface.csproj" />
+  </ItemGroup>
+</Project>
