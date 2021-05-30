@@ -19,7 +19,7 @@ namespace Shop_Bridge.Controllers.Tests
         public void GetUserDetailTest()
         {
             UserDetailResponseDTO result = TestUtils.GetUserDetail();
-            Assert.IsTrue(result.IsNotNull() && result.IsSuccess);
+            Assert.IsTrue(result != null && result.IsSuccess);
         }
     }
 
